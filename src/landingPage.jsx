@@ -21,14 +21,14 @@ const HeroSection = () => {
             src={require('./Group_1.png')} // Replace with your image URL
             alt="Hero"
             className="w-full h-[210px] sm:h-[572px] object-cover"
-            style={{ maxHeight: '572px'}}
+            style={{ maxHeight: '572px' }}
         />
 
         {/* Overlay Text */}
         <div className="opacity-100 text-[#242424] px-4 sm:px-[103px] absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start">
             <div
                 className="w-full"
-                style={{ gap: '0px' ,maxWidth:"453px",maxHeight:"136px"}}
+                style={{ gap: '0px', maxWidth: "453px", maxHeight: "136px" }}
             >
 
                 <h1 className="font-cinzel font-normal text-left mb-4 text-base sm:text-[48px] sm:leading-[68px] sm:font-cinzel">
@@ -38,13 +38,13 @@ const HeroSection = () => {
             </div>
             <p
                 className="font-poppins text-sm  text-left mb-[6px] sm:text-[18px] font-light sm:leading-[27px] sm:my-12 w-[200px]  sm:max-w-[641px] sm:w-full"
-                // style={{
-                //     maxWidth: '641px',
-                //     // maxHeight: '54px',
-                //     // marginTop: '51px',
-                //     // marginBottom: '51px',
-                //     width:'100%'
-                // }}
+            // style={{
+            //     maxWidth: '641px',
+            //     // maxHeight: '54px',
+            //     // marginTop: '51px',
+            //     // marginBottom: '51px',
+            //     width:'100%'
+            // }}
             >
                 Experience the essence of Indian cuisine. Enhance your cooking
                 experience with the authentic flavors of Indian cuisine.
@@ -85,23 +85,17 @@ const MetalButtons = () => {
 
         <div className='flex flex-wrap flex-col items-center justify-center'>
             <div
-                className="border-t border-[#421D0A] my-7 sm:w-[51.5px]"
+                className="border-t border-[#421D0A] my-sm-7 my-4 w-[51.5px]"
                 style={{
                     // width: '51.5px',
                     height: '0px',
                     gap: '0px',
                 }}
             />
-            <div className='flex flex-wrap gap-9 justify-center'>  {metalName.map((i, idx) =>
+            <div className='flex flex-wrap gap-2 gap-sm-9 px-2 justify-center'>  {metalName.map((i, idx) =>
                 <button
                     key={idx}
-                    className="border border-[#D9D9D9] w-[246px] h-24 sm:p-[22px_20px]"
-                    style={{
-                        // width: '246px',
-                        // height: '104px',
-                        // padding: '22px 86px',
-                        gap: '10px',
-                    }}
+                    className="border border-[#D9D9D9] w-sm-[246px] h-sm-24 px-2 py-2 py-sm-0 px-sm-0 sm:p-[22px_20px]"
                 >
                     {i}
                 </button>)}</div>
@@ -118,7 +112,7 @@ const priceClasses = 'text-xl font-bold text-primary'
 const ratingClasses = 'text-yellow-500'
 const reviewClasses = 'text-muted-foreground'
 
-const ProductCard = () => {
+export const ProductCard = () => {
     return (
         <div className="max-w-sm relative group">
             <div className="rounded-lg shadow-lg overflow-hidden bg-[#F7F7F7] sm:h-[413px] flex items-center justify-center">
@@ -162,13 +156,13 @@ const ProductCard = () => {
 };
 
 const TrendingProducts = () => {
-    return <div className="mt-24 text-[#242424]">
+    return <div className="sm:mt-24 mt-16 text-[#242424]">
         <p className='text-[#787878] font-poppins text-xs mb-2 sm:mb-auto sm:text-[16px] font-normal sm:leading-[60px] text-center'>Popular Products</p>
         <p className="font-cinzel text-2xl sm:text-[38px] font-normal sm:leading-[60px] text-center">
             Trending Now
         </p>
 
-        <div className='flex flex-wrap flex-col mx-2 sm:mx-20 gap-6 items-center'>
+        <div className='flex flex-wrap flex-col mx-2 sm:mx-20 gap-sm-6 gap-1 items-center'>
             <div
                 className="border-t border-[#421D0A] my-7"
                 style={{
@@ -185,7 +179,7 @@ const TrendingProducts = () => {
 
 const WhyChooseUs = () => {
     let type = [{ image: "HandHeart.png", title: "Handcrafted", des: "Each piece is meticulously handcrafted, showcasing the artistry and dedication of our skilled artisans." }, { image: "Infinity.png", title: "Timeless", des: "Discover the timeless elegance of our utensils, designed to be cherished for generations." }, { image: "SealCheck.png", title: "Authentic", des: "Experience the authentic charm of traditional craftsmanship with our genuine brass, copper, bronze, and clay utensils." }, { image: "FlowerTulip.png", title: "Sustainable", des: "Embrace sustainability with our eco-friendly utensils, crafted from natural and durable materials." }]
-    return <div className="mt-5 sm:mt-24 text-[#242424]">
+    return <div className="mt-12 sm:mt-24 text-[#242424]">
         <p className='text-[#787878] font-poppins text-xs mb-2 sm:mb-auto sm:text-[16px] font-normal sm:leading-[60px] text-center'>Best in Business  </p>
         <p className="font-cinzel text-2xl sm:text-[38px] font-normal sm:leading-[60px] text-center">
             Why Choose Us
@@ -193,14 +187,14 @@ const WhyChooseUs = () => {
         <div className="flex flex-wrap justify-center items-center my-3 sm:my-7">
 
             <div
-                className="max-w-full h-[40px] sm:h-[60px] md:h-[70px] lg:h-[80px] xl:h-[80px] text-center"
+                className="max-w-full h-sm-[40px] sm:h-[60px] md:h-[70px] lg:h-[80px] xl:h-[80px] text-center"
                 style={{
                     width: '100%', // Use 100% to be responsive and fill the parent container
                     maxWidth: '1141px', // Set maximum width to 1141px
                 }}
             >
 
-                <p className="font-cinzel text-xs sm:text-[24px] font-normal sm:leading-[40px] text-center text-[#242424]">
+                <p className="font-cinzel text-[18px] font-normal sm:leading-[40px] text-center text-[#242424]">
                     Experience timeless tradition with our copper, brass, bronze and Clay utensils, blending heritage and modern culinary art.
                 </p>
             </div>
@@ -214,7 +208,7 @@ const WhyChooseUs = () => {
                     gap: '0px',
                 }}
             />
-            <div className='flex flex-wrap gap-10 justify-center w-full pb-[50px] mx-4 sm:m-[unset]'>
+            <div className='flex flex-wrap gap-10 justify-center w-full pb-[50px] mx-sm-4 px-2 px-sm-0 sm:m-[unset]'>
                 {type.map((i, idx) =>
                     <div key={idx} className="gap-10 sm:w-[100%] md:w-[400px] lg:w-[287px] "
                         style={{
@@ -226,11 +220,10 @@ const WhyChooseUs = () => {
                         </div>
                         <div className='py-4'>
                             <p className="sm:text-left text-center font-cinzel text-[14px] sm:text-[24px] font-normal sm:leading-[40px]  text-[#242424]">
-
                                 {i.title}</p>
                         </div>
                         <div className=''>
-                            <p className="font-poppins capitalize text-[14px] sm:text-[16px] font-normal sm:leading-[28px] text-left text-[#242424]">
+                            <p className="font-poppins capitalize text-[14px] sm:text-[16px] font-normal sm:leading-[28px] sm:text-left text-center text-[#242424]">
                                 {i.des}</p>
                         </div>
                     </div>
@@ -243,9 +236,9 @@ const WhyChooseUs = () => {
     </div>
 }
 
-const Footer = () => {
+export const Footer = () => {
     let footer = [{ name: "About Us", val: ["Home", "About", "Contact"] }, { name: "Shop", val: ["Cookware", "Drinkware", "Serveware", "Gifting"] }, { name: "Contact", val: ["contact@dhaatu.com", "826-955-0232"] }, { name: "Address", val: ["T2-A, 605, Sagar lake view homes, Bhopal,    India "] }]
-    return <div className="mt-5 sm:mt-24 text-[#242424]  bg-[#faf5f1]  border-[#E1DCD8] py-11" style={{ borderWidth: '1px' }}>
+    return <div className="mt-12 sm:mt-24 text-[#242424]  bg-[#faf5f1]  border-[#E1DCD8] py-11" style={{ borderWidth: '1px' }}>
 
         <div className='flex flex-wrap flex-col items-center justify-between'>
 

@@ -32,7 +32,7 @@ const Navbar = () => {
           <img
             src={require('./Dhaatu.png')}
             alt="Logo"
-            className="h-8 w-auto"
+            className="h-sm-8 h-5 w-auto"
           />
         </div>
 
