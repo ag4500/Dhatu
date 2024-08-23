@@ -7,8 +7,8 @@ export default function App() {
   return (
     <div>
         <Navbar/>
-        {/* <DhaatuWebsite/> */}
-        <ProductPage/>
+        <DhaatuWebsite/>
+        {/* <ProductPage/> */}
     </div>
   );
 }

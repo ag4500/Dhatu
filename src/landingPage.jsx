@@ -115,27 +115,22 @@ const reviewClasses = 'text-muted-foreground'
 export const ProductCard = () => {
     return (
         <div className="max-w-sm relative group">
-            <div className="rounded-lg shadow-lg overflow-hidden bg-[#F7F7F7] sm:h-[413px] flex items-center justify-center">
-                <img
-                    className="w-[50%] sm:w-full sm:max-h-full object-contain m-9 sm-mx-9"
-                    src={require('./Group_4.png')}
-                    alt="Product Image"
-                />
-                {/* Icons appear on hover */}
-                <div className="absolute top-0 h-full w-full flex flex-wrap flex-col items-end justify-start gap-3 m-3  opacity-0 group-hover:opacity-100  transition-opacity duration-300">
-                    <div className='text-gray-800 rounded-full bg-[#FFFFFF] w-10 h-10 flex items-center justify-center'>
-
-                        <MdOutlineRemoveRedEye className=""
-                            size={15} />
-                    </div>
-                    <div className='text-gray-800 rounded-full bg-[#FFFFFF] w-10 h-10 flex items-center justify-center'>
-
-                        <FaShoppingCart className=""
-                            size={15} />
-                    </div>
-
-                </div>
-            </div>
+          <div className="group relative rounded-lg shadow-lg overflow-hidden bg-[#F7F7F7] sm:h-[413px] flex items-center justify-center">
+  <img
+    className="w-[50%] sm:w-full sm:max-h-full object-contain m-9 sm:mx-9 transition-transform duration-300 ease-in-out group-hover:scale-110"
+    src={require('./Group_4.png')}
+    alt="Product Image"
+  />
+  {/* Icons appear on hover */}
+  <div className="absolute top-0 h-full w-full flex flex-wrap flex-col items-end justify-start gap-3 m-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div className='text-gray-800 rounded-full bg-[#FFFFFF] w-10 h-10 flex items-center justify-center'>
+      <MdOutlineRemoveRedEye size={15} />
+    </div>
+    <div className='text-gray-800 rounded-full bg-[#FFFFFF] w-10 h-10 flex items-center justify-center'>
+      <FaShoppingCart size={15} />
+    </div>
+  </div>
+</div>
 
             <div className="p-4">
                 <p className="font-poppins text-sm sm:text-[24px] font-light sm:leading-[36px] text-[#242424] text-left">
@@ -271,7 +266,7 @@ export const Footer = () => {
         </div>
         <div className='mx-8'>
             <hr className="border-t border-[#E1DCD8] my-5" />
-            <div className='flex flex-wrap justify-between sm:mx-12'>
+            <div className='flex flex-wrap justify-between'>
                 <img src={require('./Dhaatu.png')} alt="Logo" className="h-6 sm:h-8" />
                 <p className="font-light text-xs leading-8 sm:text-[16px] sm:leading-[28px] text-right text-[#242424]">
                     Copyright © 2024 Dhaatu
