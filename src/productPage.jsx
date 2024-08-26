@@ -9,10 +9,10 @@ import { Footer, ProductCard } from './landingPage';
 
 function ProductPage() {
     return (
-        <div>
-            <div className='px-4 sm:px-6 lg:px-8 py-9'>
+     
+            <div className='px-4 sm:px-6 lg:px-28 py-9'>
                 <div className="flex flex-wrap gap-6 h-full">
-                    <div className="flex flex-wrap gap-2 flex-col">{Array.from({ length: 4 }).map((_, idx) => <div key={idx} className="rounded-lg shadow-lg overflow-hidden bg-[#F7F7F7] sm:h-28 w-28 flex items-center justify-center h-full">
+                    <div className="flex flex-wrap gap-3 flex-col">{Array.from({ length: 4 }).map((_, idx) => <div key={idx} className="rounded-lg shadow-lg overflow-hidden bg-[#F7F7F7] h-20 sm:h-28 w-28 flex items-center justify-center">
                         <img
                             className="w-[50%] sm:w-full sm:max-h-full object-contain m-9 sm-mx-9"
                             src={require('./bigOne.png')}
@@ -60,9 +60,7 @@ function ProductPage() {
                 </div>
 
             </div>
-            <Footer />
-        </div>
-
+       
     )
 }
 

@@ -6,9 +6,11 @@ import ProductPage from "./productPage";
 export default function App() {
   return (
     <div>
-        <Navbar/>
-        <DhaatuWebsite/>
-        {/* <ProductPage/> */}
+     
+            <Navbar>
+        <ProductPage/>
+        </Navbar>
+     
     </div>
   );
 }
