@@ -15,7 +15,7 @@ const Navbar = (props) => {
         <div className="px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-between">
           {/* Left Side Links */}
           <div className="font-poppins hidden lg:flex space-x-4 text-sm font-light uppercase gap-5">
-            <a href="#" className="text-[#242424] hover:text-blue-500">
+            <a href="/cookware" className="text-[#242424] hover:text-blue-500">
               Cookware
             </a>
             <a href="#" className="text-[#242424] hover:text-blue-500">
