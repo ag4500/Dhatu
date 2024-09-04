@@ -92,10 +92,10 @@ const MetalButtons = () => {
                     gap: '0px',
                 }}
             />
-            <div className='flex flex-wrap gap-2 gap-sm-9 px-2 justify-center'>  {metalName.map((i, idx) =>
+            <div className='flex w-full flex-wrap gap-2 gap-sm-9 px-2 justify-center'>  {metalName.map((i, idx) =>
                 <button
                     key={idx}
-                    className="border border-[#D9D9D9] sm:max-w-[246px] sm:max-h-24 px-2 py-2 md:py-0 px-sm-0 sm:p-[22px_20px]"
+                    className="border border-[#D9D9D9] sm:max-w-[246px] sm:w-full sm:max-h-24 px-2 py-2 sm:p-[22px_20px]"
                 >
                     {i}
                 </button>)}</div>
@@ -114,7 +114,7 @@ const reviewClasses = 'text-muted-foreground'
 
 export const ProductCard = ({handleModal}) => {
     return (
-        <div className="max-w-sm relative group" onClick={handleModal}>
+        <div className="lg:max-w-sm sm:max-w-lg relative group" onClick={handleModal}>
             <div className="group relative overflow-hidden bg-[#F7F7F7] sm:h-[413px] flex items-center justify-center">
                 <img
                     className="w-[50%] sm:w-full sm:max-h-full object-contain m-9 sm:mx-9 transition-transform duration-300 ease-in-out group-hover:scale-110"
@@ -166,8 +166,10 @@ const TrendingProducts = () => {
                     gap: '0px',
                 }}
             />
-            <div className='flex flex-wrap gap-6'>
-                {Array.from({ length: 4 }).map((i) => <ProductCard />)} </div></div>
+            <div className='flex lg:flex-nowrap flex-wrap justify-center gap-6'>
+                {Array.from({ length: 4 }).map((i) => <ProductCard />)} 
+            </div>
+        </div>
 
     </div>
 }

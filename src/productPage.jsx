@@ -7,11 +7,18 @@ import CounterButton from './counter';
 import Reviews from './Reviews';
 import { Footer, ProductCard } from './landingPage';
 import Modal from './modal';
+import Drawer from './drawer';
 
 function ProductPage() {
     const [isModal, setIsModal] = useState(false);
+    const [drawerOpen,setDrawerOpen]=useState(false);
     const handleModal = () => {
         setIsModal(!isModal);
+    };
+    const handleDrawer=()=>{
+        
+            setDrawerOpen(!drawerOpen);
+        
     }
     console.log(isModal)
     return (
@@ -47,11 +54,11 @@ function ProductPage() {
                     <div className='flex gap-6 font-poppins mt-7'>
 
                         <CounterButton />
-                        <button className="text-base  border border-[#242424] text-[#242424] font-normal py-2 px-6  hover:text-white transition duration-300">
+                        <button onClick={handleDrawer} className="text-base  border border-[#242424] text-[#242424] font-normal py-2 px-6  hover:text-white transition duration-300">
                             Add to Cart
                         </button>
                     </div>
-
+        {drawerOpen&&<Drawer toggleDrawer={handleDrawer} drawerOpen={drawerOpen}/>}
                 </div>
             </div>
             {/* Review Section */}
