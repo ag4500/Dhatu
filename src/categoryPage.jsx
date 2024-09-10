@@ -1,13 +1,15 @@
 import React from 'react'
 import Breadcrumb from './breadcrumb'
 import { ProductCard } from './landingPage'
+import { useLocation } from 'react-router-dom'
 
 function CategoryPage() {
+  const location=useLocation();
   return (
     <div className='px-24 py-9'><Breadcrumb />
     
       <div className='py-10'>
-        <h5 className='text-4xl	font-cinzel'>Cookware</h5>
+        <h5 className='text-4xl	font-cinzel'>{location.pathname==="/cookware"?"Cookware":location.pathname==="/drinkware"?"Drinkware":"Serveware"}</h5>
 
       </div>
       <div className='flex justify-between'>

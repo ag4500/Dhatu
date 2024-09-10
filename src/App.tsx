@@ -11,6 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar><DhaatuWebsite /></Navbar>} />
         <Route path="/cookware" element={<Navbar><CategoryPage /></Navbar>} />
+        <Route path="/drinkware" element={<Navbar><CategoryPage /></Navbar>} />
+        <Route path="/serveware" element={<Navbar><CategoryPage /></Navbar>} />
+    
         <Route path="/product" element={<Navbar><ProductPage /></Navbar>} />
 
       </Routes>

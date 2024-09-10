@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaEye, FaShoppingCart } from 'react-icons/fa';
 import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 const sharedClasses = {
     primaryColor: 'bg-[var(--primary)]',
@@ -92,10 +93,10 @@ const MetalButtons = () => {
                     gap: '0px',
                 }}
             />
-            <div className='flex w-full flex-wrap gap-2 gap-sm-9 px-2 justify-center'>  {metalName.map((i, idx) =>
+            <div className='flex w-full flex-wrap gap-8 sm:gap-9 px-2 justify-center'>  {metalName.map((i, idx) =>
                 <button
                     key={idx}
-                    className="border border-[#D9D9D9] sm:max-w-[246px] sm:w-full sm:max-h-24 px-2 py-2 sm:p-[22px_20px]"
+                    className="border border-[#D9D9D9] sm:max-w-[246px] sm:w-full sm:max-h-[104px] px-2 py-2 sm:p-[22px_85px]"
                 >
                     {i}
                 </button>)}</div>
@@ -112,9 +113,10 @@ const priceClasses = 'text-xl font-bold text-primary'
 const ratingClasses = 'text-yellow-500'
 const reviewClasses = 'text-muted-foreground'
 
-export const ProductCard = ({handleModal}) => {
+export const ProductCard = ({handleModal,onNavigate}) => {
+   
     return (
-        <div className="lg:max-w-sm sm:max-w-lg relative group" onClick={handleModal}>
+        <div className="lg:max-w-sm sm:max-w-lg relative group" onClick={handleModal?handleModal:onNavigate}>
             <div className="group relative overflow-hidden bg-[#F7F7F7] sm:h-[413px] flex items-center justify-center">
                 <img
                     className="w-[50%] sm:w-full sm:max-h-full object-contain m-9 sm:mx-9 transition-transform duration-300 ease-in-out group-hover:scale-110"
@@ -151,6 +153,7 @@ export const ProductCard = ({handleModal}) => {
 };
 
 const TrendingProducts = () => {
+    const navigate=useNavigate();
     return <div className="sm:mt-24 mt-16 text-[#242424]">
         <p className='text-[#787878] font-poppins text-xs mb-2 sm:mb-auto sm:text-[16px] font-normal sm:leading-[60px] text-center'>Popular Products</p>
         <p className="font-cinzel text-2xl sm:text-[38px] font-normal sm:leading-[60px] text-center">
@@ -167,7 +170,7 @@ const TrendingProducts = () => {
                 }}
             />
             <div className='flex lg:flex-nowrap flex-wrap justify-center gap-6'>
-                {Array.from({ length: 4 }).map((i) => <ProductCard />)} 
+                {Array.from({ length: 4 }).map((i) => <ProductCard onNavigate={()=>navigate('/product')}/>)} 
             </div>
         </div>
 

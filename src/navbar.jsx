@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { CiSearch, CiShoppingCart } from 'react-icons/ci';
 import { Footer } from './landingPage';
-
+import Drawer from './drawer';
 const Navbar = (props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [drawerOpen,setDrawerOpen]=useState(false);
+  const handleDrawer=()=>{
+        
+    setDrawerOpen(!drawerOpen);
 
+}
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -18,10 +23,10 @@ const Navbar = (props) => {
             <a href="/cookware" className="text-[#242424] hover:text-blue-500">
               Cookware
             </a>
-            <a href="#" className="text-[#242424] hover:text-blue-500">
+            <a href="/drinkware" className="text-[#242424] hover:text-blue-500">
               Drinkware
             </a>
-            <a href="#" className="text-[#242424] hover:text-blue-500">
+            <a href="/serveware" className="text-[#242424] hover:text-blue-500">
               Serveware
             </a>
             <a href="#" className="text-[#242424] hover:text-blue-500">
@@ -46,7 +51,7 @@ const Navbar = (props) => {
             </svg>
 
           </div>
-
+          {drawerOpen&&<Drawer toggleDrawer={handleDrawer} drawerOpen={drawerOpen}/>}
           {/* Right Side Links and Icons */}
           <div className="font-poppins hidden lg:flex space-x-4 text-sm font-light uppercase gap-5">
             <a href="#" className="text-[#242424] hover:text-blue-500">
@@ -62,7 +67,7 @@ const Navbar = (props) => {
               <CiSearch size={20} />
             </button>
             <div className="relative inline-block">
-              <button className="text-[#242424] hover:text-blue-500">
+              <button className="text-[#242424] hover:text-blue-500" onClick={handleDrawer}>
                 {/* <CiShoppingCart size={20} /> */}
                 <img
                   src={require('./Tote.png')}
